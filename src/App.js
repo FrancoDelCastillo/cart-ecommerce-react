@@ -5,17 +5,16 @@ import Sneakers from './components/Sneakers';
 
 import useFetch from './hooks/useFetch';
 import {SNEAKERS_STORAGE} from './utils/constants'
-import { offline_response } from './utils/offline-api-response';
 import {ToastContainer, toast} from "react-toastify"
 
 function App() {
 
-  // const sneakersResponse = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=10&page=1&brand=nike", {
-  //   "method": "GET",
-  //   "headers": {
-  //     "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
-  //     "x-rapidapi-key": "c1a621d017msh838a63b5ab9074fp11670bjsnbef27e16329f"}
-  // })
+  const sneakersResponse = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=10&page=1&brand=nike", {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
+      "x-rapidapi-key": "c1a621d017msh838a63b5ab9074fp11670bjsnbef27e16329f"}
+  })
 
   // cart list state
   const [ cartList, setCartList] = useState([]);
@@ -64,8 +63,8 @@ function App() {
 
   return (
     <div>
-      <MenuTop cartList={cartList} addSneakerInCart={addSneakerInCart} getCartList={getCartList} sneakersResponse={offline_response}/>
-      <Sneakers sneakersResponse={offline_response} addSneakerInCart={addSneakerInCart} />
+      <MenuTop cartList={cartList} addSneakerInCart={addSneakerInCart} getCartList={getCartList} sneakersResponse={sneakersResponse}/>
+      <Sneakers sneakersResponse={sneakersResponse} addSneakerInCart={addSneakerInCart} />
       <ToastContainer style={{position:'fixed'}} position='top-left' hideProgressBar={true} autoClose={1000}
 
 />
