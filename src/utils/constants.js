@@ -1,0 +1,1 @@
+export const SNEAKERS_STORAGE = "sneakers-ls"

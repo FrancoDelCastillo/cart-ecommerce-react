@@ -1,0 +1,48 @@
+.sneaker-col{
+    padding: 10px;
+}
+
+.card{
+    height: 360px;
+    border-radius: 20px;
+    width: 300px;
+    margin: auto;
+    
+}
+
+.card-img{
+    margin: auto;
+}
+
+.btn-primary{
+    &:active{
+        background-color: #51C4D3;
+        border-color: #51C4D3;
+    }
+    &:focus{
+        background-color: #51C4D3;
+        border-color: #51C4D3;
+    }
+}
+
+.button-add-cart{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #51C4D3;
+    border-color: #51C4D3;
+    font-weight: bold;
+    &:hover{
+        background-color: #126E82;
+        border-color: #126E82;
+    }
+    &:active{
+        background-color: #126E82;
+        border-color: #126E82;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    .card{
+        width: 100%;
+    }
+}

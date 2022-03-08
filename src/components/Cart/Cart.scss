@@ -1,0 +1,144 @@
+::-webkit-scrollbar{
+    width: 0.5rem;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #51C4D3;
+    border-radius: 50px;
+    
+}
+
+.cart-content::-webkit-scrollbar{
+    width: 0.5rem;
+    
+}
+
+.cart-content::-webkit-scrollbar-thumb{
+    background-color: #51C4D3;
+    border-radius: 50px;
+    
+}
+
+.button-cart{
+    >svg{
+        height: 50px;
+        width: 50px;
+        fill: white;
+        transition: ease 0.5s;
+        &:hover{
+            fill: #51C4D3;
+        }
+    }
+}
+
+.cart-content{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 700px;
+    overflow: scroll;
+    overflow-x: hidden;  
+    color: white;
+    z-index: 1;
+    background-color: #D8E3E7;
+    transform: translate(100%);
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.open{
+    transform: none;
+  
+    box-shadow: 0px 0px 8px 0px #132C33;
+}
+
+
+.cart-content__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    background-color: #126E82;
+    margin-bottom: 10px;
+    >button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        &:hover{
+            color: #132C33;
+            svg{
+                fill:#132C33;
+            }
+        }
+        >svg{
+        width: 20px;
+        fill: white; 
+    }
+}
+}
+
+.render-sneaker__container{
+    display: flex;
+    width: 90%;
+    height: 160px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    margin: auto;
+    margin-bottom: 10px;
+
+    >div>h6{
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+    > div > button {
+        padding: 0;
+        width: 60px;
+        height: 40px;
+        margin: 6px;
+        background-color: #51C4D3;
+        border-color: #51C4D3;
+        font-size: 1.4rem;
+        
+        &:hover{
+            background-color: #132C33;
+            border-color: #132C33;
+        }
+        
+    }
+}
+
+.cart-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    background-color: #126E82;
+    > button{
+        width: 250px;
+        font-size: 1.4rem;
+        border-radius: 20px;
+        background-color: #51C4D3;
+        border-color: #51C4D3;
+        &:hover{
+            background-color:#132C33;
+            border-color: #132C33;
+        }
+        &:active{
+            background-color: #132C33;
+            border-color: #132C33;
+        }
+    }
+}
+
