@@ -1,6 +1,8 @@
 # Simple ecommerce cart built with ReactJs
 
-It fetchs the latest popular sneakers data from RapidAPI
+Main branch uses offline data for sneakers
+
+with-fetch-API branch fetchs the latest popular sneakers data from RapidAPI
 https://rapidapi.com/tg4-solutions-tg4-solutions-default/api/the-sneaker-database/
 
 It only shows Nike sneakers for practical purposes
