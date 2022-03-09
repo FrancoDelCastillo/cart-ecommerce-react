@@ -7,4 +7,4 @@ https://rapidapi.com/tg4-solutions-tg4-solutions-default/api/the-sneaker-databas
 
 It only shows Nike sneakers for practical purposes
 
-Deployed to Netlify: https://6227cd20ce09190078bf4ed0--confident-kilby-f502a1.netlify.app/
+Deployed to Netlify: https://6227fb6a6ef5ba47ce1346cc--confident-kilby-f502a1.netlify.app/
