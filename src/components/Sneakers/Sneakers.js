@@ -20,7 +20,7 @@ export default function Sneakers(props){
 
     return(
         <Container className="sneakers-container">
-            <Row md={3} lg={4}>
+            <Row xs={1} sm={2} md={3} lg={4} xl={5}>
                 {loading || !sneakersList ? <SpinnerLoading/> : sneakersList.map((sneaker, index)=>{
                     return <Sneaker key={index} sneaker={sneaker} addSneakerInCart={addSneakerInCart}/>})}
             </Row>

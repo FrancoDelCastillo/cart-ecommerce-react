@@ -34,23 +34,23 @@
 
 .cart-content{
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     right: 0;
     top: 0;
     width: 400px;
     height: 700px;
-    overflow: scroll;
     overflow-x: hidden;  
     color: white;
     z-index: 1;
     background-color: #D8E3E7;
     transform: translate(100%);
     transition: transform 0.5s ease-in-out;
-    
 }
 
 .open{
     transform: none;
-  
     box-shadow: 0px 0px 8px 0px #132C33;
 }
 
@@ -81,20 +81,25 @@
 }
 }
 
+
+
 .render-sneaker__container{
     display: flex;
-    width: 90%;
+    width: 360px;
     height: 160px;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     background-color: white;
     color: black;
     border-radius: 6px;
     margin: auto;
     margin-bottom: 10px;
-
+    >div>img{
+        width: 180px;
+        padding: 20px;
+    }
     >div>h6{
-        width: 200px;
+        width: 180px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -117,11 +122,11 @@
     }
 }
 
+
 .cart-footer{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 20px;
     align-items: center;
     background-color: #126E82;

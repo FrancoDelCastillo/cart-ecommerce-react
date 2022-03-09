@@ -84,9 +84,12 @@ export default function Cart(props){
             {cartList.length > 0 ?<CartFullIcon/>:<CartIcon/>}
         </Button>
         <div className={cartStyle}>
+            <div className="cart-wrapper">
             <CartHeader closeCart={closeCart} emptyCart={emptyCart}/>
             {singleProducts.map((id, index)=>{return(
-            <CartContent key={index} id={id} cartList={cartList} addSneakerInCart={addSneakerInCart} decreaseSneaker={decreaseSneaker} sneakersResponse={sneakersResponse}/>)})}
+            <CartContent key={index} id={id} cartList={cartList} addSneakerInCart={addSneakerInCart} decreaseSneaker={decreaseSneaker} sneakersResponse={sneakersResponse}/>
+            )})}
+            </div>
             {totalPrice > 0? <CartFooter totalPrice={totalPrice} /> : null}
             
         </div>
@@ -130,9 +133,10 @@ function CartContent(props){
             if(id === sneaker.id){
                 const quantity = countDuplicateItem(cartList, id);
                 return (
-                <RenderSneakerInCart addSneakerInCart={addSneakerInCart} decreaseSneaker={decreaseSneaker} quantity={quantity} sneaker={sneaker} />
+                <RenderSneakerInCart key={index} addSneakerInCart={addSneakerInCart} decreaseSneaker={decreaseSneaker} quantity={quantity} sneaker={sneaker} />
                 )
             }
+            return null;
         })
     }
     return null;
@@ -143,9 +147,9 @@ function RenderSneakerInCart(props){
     return(
         <div className="render-sneaker__container">
             <div>
-                <img src={media.imageUrl} alt={name} style={{width: "140px"}} />
+                <img src={media.imageUrl} alt={name}  />
             </div>
-            <div>
+            <div className="render-sneaker__container__details">
                 <h6 >{name}</h6>
                 <div>Quantity: {quantity}</div>
                 {retailPrice > 0 ?<div>total Price: ${quantity * retailPrice}.00</div>:

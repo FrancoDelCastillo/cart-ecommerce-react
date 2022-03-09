@@ -3,15 +3,27 @@
 }
 
 .card{
-    height: 360px;
+    height: 440px;
     border-radius: 20px;
-    width: 300px;
+    width: 380px;
+    display: flex;
     margin: auto;
-    
+    justify-content: space-between;
+}
+
+.card-body{
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-img{
+    height: 240px;
+    width: 340px;
     margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .btn-primary{
@@ -41,8 +53,30 @@
     }
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 576px) {
     .card{
+        height: 360px;
         width: 100%;
+        display: flex;
+        
     }
+
+    .card-body{
+        flex: 1 0;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .card-img{        
+        height: 160px;
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .details-wrapper{
+        height: 200px;
+    }
+
 }
