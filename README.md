@@ -1,4 +1,4 @@
-# Simple ecommerce cart built with ReactJs
+# Shopping cart prototype built with ReactJs
 
 Main branch uses offline data for sneakers
 
